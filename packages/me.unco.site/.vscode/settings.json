@@ -1,0 +1,7 @@
+{
+  "cSpell.words": ["astro", "astrojs"],
+  "files.associations": {
+    "*.mdx": "markdown"
+  },
+  "typescript.tsdk": "node_modules/typescript/lib"
+}

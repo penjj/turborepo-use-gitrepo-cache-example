@@ -1,0 +1,23 @@
+---
+import { getCollection } from 'astro:content'
+import SiteLayout from '@/layouts/SiteLayout.astro'
+
+import '@/styles/blog.css'
+
+export async function getStaticPaths() {
+  const blogEntries = await getCollection('blog')
+  return blogEntries.map(entry => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }))
+}
+
+const { entry } = Astro.props
+const { Content } = await entry.render()
+---
+
+<SiteLayout title={entry.data.title}>
+  <article transition:animate="initial" class="blog">
+    <Content />
+  </article>
+</SiteLayout>

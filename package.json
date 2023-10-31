@@ -1,0 +1,13 @@
+{
+  "name": "turborepo-use-gitrepo-cache-example",
+  "homepage": "https://github.com/penjj/turborepo-use-gitrepo-cache-example",
+  "private": true,
+  "license": "MIT",
+  "description": "Use git repository instead of vercel remote build cache.",
+  "scripts": {
+    "build": "turbo run build"
+  },
+  "devDependencies": {
+    "turbo": "^1.10.16"
+  }
+}

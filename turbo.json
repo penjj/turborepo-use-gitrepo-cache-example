@@ -1,0 +1,13 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "pipeline": {
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": ["packages/me.unco.site/dist/**"]
+    }
+  },
+  "globalDependencies": [
+    "tsconfig.json",
+    "pnpm-lock.yaml"
+  ]
+}
